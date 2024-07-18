@@ -5,6 +5,9 @@ ruby "3.3.4"
 # Use specific branch of Rails
 gem "rails", github: "rails/rails", branch: "7-1-stable"
 
+# Our own gems
+gem "multi_tools", git: "git@github.com:FestaLab/multi_tools.git", branch: "main"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
