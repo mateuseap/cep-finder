@@ -6,4 +6,5 @@ class Address < ApplicationRecord
   validates :city, presence: true
   validates :neighborhood, presence: true
   validates :areacode, presence: true
+  validates :zipcode, presence: true
 end
