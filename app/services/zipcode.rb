@@ -13,7 +13,7 @@ module Zipcode
     Zipcode::Client.new(options)
   end
 
-  # Imports a addressess from a list of zipcodes
+  # Import addresses from a list of zipcodes
   def self.import_addresses(zipcodes)
     zipcodes.each do |zipcode|
       Zipcode::Service::Address.emerge(zipcode)
