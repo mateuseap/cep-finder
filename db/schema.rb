@@ -10,23 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_30_122234) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_02_193533) do
   create_table "addresses", force: :cascade do |t|
     t.string "street", null: false
     t.string "state", null: false
     t.string "city", null: false
     t.string "neighborhood", null: false
     t.string "areacode", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "zipcodes", force: :cascade do |t|
-    t.string "number"
-    t.string "street"
-    t.string "state"
-    t.string "neighborhood"
-    t.string "city"
+    t.string "zipcode", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
