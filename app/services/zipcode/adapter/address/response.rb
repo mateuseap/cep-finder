@@ -22,6 +22,10 @@ module Zipcode
       def areacode
         payload['ddd']
       end
+
+      def zipcode
+        payload['cep']
+      end
     end
   end
 end
