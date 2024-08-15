@@ -12,7 +12,6 @@ module Zipcode
           _1.city = address.city
           _1.neighborhood = address.neighborhood
           _1.areacode = address.areacode
-          _1.zipcode = address.zipcode
         end
       end
     end
