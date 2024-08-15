@@ -3,9 +3,13 @@
 module Zipcode
   module Api
     class Address
-      def self.find(zipcode)
-        response = Zipcode.client.get(zipcode)
-        Zipcode::Adapter::Address::Response.new(response.dig("xml"))
+      def self.find(zipcode, xml: false)
+        mode = xml ? "xml" : "json"
+
+        response = Zipcode.client(xml:).get("/#{mode}/#{zipcode}")
+        response = response.dig("xml") if xml
+
+        Zipcode::Adapter::Address::Response.new(response)
       end
     end
   end
